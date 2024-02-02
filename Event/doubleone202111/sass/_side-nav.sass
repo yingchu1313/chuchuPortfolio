@@ -1,0 +1,192 @@
+// 共用
+.mainNAV
+  position: relative
+  @media (min-width: $screen-sm)
+    width: $container-sm
+  @media (min-width: $screen-md) and (max-width: $screen-lg - 1px)
+    width: $container-md
+  @media (min-width: $screen-lg)
+    width: auto
+
+.side-nav
+  z-index: $zindex-navbar
+  li
+    a
+      color: darken($WHITEcolor, 0%)
+
+
+
+// 手機版
+@media (min-width: $screen-xxs) and (max-width: $screen-lg - 1px)
+  .mainNAV
+    height: 100%
+    margin: 0 auto
+    button
+      position: absolute
+      top: -50px
+      right: 0
+      width: 44px
+      height: 44px
+      background: none
+      color: $CIScolorD
+      border: 0
+      text-align: -webkit-center
+      text-align: center
+      &:before
+        content: url(https://img.eclife.com.tw/EDM/images/BrandLogi/menu-01.svg)
+        position: absolute
+        top: 8px
+        left: 0
+        display: block
+        width: 44px
+        height: 44px
+  .side-nav
+    position: fixed
+    right: -105%
+    top: 0
+    width: 70%
+    +distanceMP(0,0)
+    height: 100vh
+    overflow-y: auto
+    -webkit-overflow-scrolling: touch
+    background: #232323
+    .side-nav-list
+      position: relative
+      width: 100%
+      float: left
+      +distanceMP(0,15px 15px)
+      +fontT
+      font-weight: bold
+      color: darken($WHITEcolor, 5%)
+      cursor: pointer
+      a
+        display: block
+        color: $WHITEcolor
+      &:nth-child(1)
+        a
+          display: inline
+          &:nth-child(2)
+            border-left: 1px solid darken($WHITEcolor, 10%)
+            padding-left: 20px
+            margin-left: 20px
+      .megaMENU
+        // 點了才開第三層
+        position: absolute
+        left: 0 !important
+        width: 100%
+        height: auto
+        opacity: 0
+        float: left
+        background: #333333
+        +transition(all 0.2s)
+        +transform(translate(-100%,10px))
+        ul
+          +distanceMP(0,15px)
+          width: 100%
+        .megaMENU-list
+          padding: 10px 1rem
+    .js-side-nav-in
+      .megaMENU
+        position: relative
+        top: 15px
+        left: -70px !important
+        padding: 10px 0
+        width: calc(100% + 70px)
+        height: 100%
+        opacity: 1
+        +transform(translate(0,0))
+        .megaMENU-list
+          padding: 10px 0 10px 70px
+    .side-nav-logo
+      +distanceMP(0 0 20px,20px 0)
+      width: 100%
+      float: left
+      text-align: center
+      img
+        width: 40vw
+        height: auto
+    // burger menu icon
+    @for $i from 1 through 12
+      .menu#{$i}
+        background: url(https://img.eclife.com.tw/EDM/images/BrandLogi/menu-icon-xs.svg) no-repeat 20px -40px* $i
+// PC
+@media (min-width: $screen-lg)
+  .mainNAV
+    background: #555555
+    button
+      display: none
+  .side-nav
+    margin: 0 auto
+    width: 1170px
+    height: auto
+    text-align: center
+    // 寬度盡量不要寫死
+    .side-nav-list
+      display: inline-block
+      position: relative
+      // width: 10%
+      +distanceMP(0,10px 30px)
+      +fontT
+      letter-spacing: 0.05em
+      text-align: center
+      cursor: pointer
+      color: $WHITEcolor
+      .megaMENU
+        position: absolute
+        top: 38px
+        left: 0
+        opacity: 0
+        z-index: $zindex-basement
+        +transition(all 0.5s ease)
+        +transform-origin(12.5% 0)
+        +transform(scale(1,0))
+        ul
+          +distanceMP(9px,0)
+          width: 100px
+          overflow: hidden
+          float: left
+          z-index: $zindex-floor
+        .megaMENU-list
+          display: block
+          position: relative
+          border: 0
+          +fontT-sm(2.2em)
+          a
+            display: inline-block
+            width: 100%
+            float: left
+            position: relative
+            color: $WHITEcolor
+            &:hover
+              color: darken($WHITEcolor, 20%)
+      &:hover
+        background: #212121
+        color: $WHITEcolor
+        a
+          color: $WHITEcolor
+        .megaMENU
+          opacity: 1
+          background: #212121
+          z-index: $zindex-floor
+          +transform(scale(1,1))
+
+      // megaMENU 選單定位用
+      // @for $i from 1 through 4
+      //   .megaMENU#{$i}
+      //     left: 292.46px - 293.46px * $i
+      //     &:before
+      //       left: 293.46px* $i - 161px
+.side-nav
+  // 官方網站,粉絲專頁
+  .menu10, .menu12
+    float: right
+  .icon-official,.icon-fb
+    font-family: $font-family !important
+    &:before
+      padding-right: 5px
+      font-family: "icomoon" !important
+@media (min-width: $screen-xxs) and (max-width: $screen-lg - 1px)
+  .icon-official,.icon-fb
+    font-weight: 600
+    &:before
+      display: none

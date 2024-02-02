@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>打中35隻就領購物金</title>
+	<link href="/images/favicon.ico" rel="shortcut icon">
+
+	<script src="/src/assets/js/jquery.min.js"></script>
+	<script src="/src/assets/js/swiper-bundle.min.js"></script>
+	<script src="/src/assets/js/bootstrap.min.js"></script>
+	<script src="/src/assets/js/vue.js"></script>
+    <!-- 此段不要複製到每月活動 框架已有 -->
+    <link href="https://img.eclife.com.tw/EDM/Structure.min.V1.css" rel="stylesheet">
+    <link href="/src/assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../doubleone202111/css/Game.css" rel="stylesheet">
+    <script src="../doubleone202111/js/main.js"></script>
+</head>
+<body>
+    <div id="lsdv">
+        <div id="js-doc-bg" style="display:none"></div>
+        <!-- //DarkenBackground -->
+        <header>
+            <div class="col-xs-12 ec-logo">
+                <div class="container logo-well">
+                    <a href="https://www.eclife.com.tw/" target="_blank" class="logo-a">
+                        <img src="https://img.eclife.com.tw/EDM/images/BrandLogi/logo.svg" alt="EcLife" class="img-responsive">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="col-xs-12 EDM" data-name="EDM">
+            <div class="container bd">
+                <div class="col-xs-12 title">
+                    <picture>
+                        <source srcset="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game_02.gif" media="(min-width: 1023px)">
+                        <source srcset="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game-m_01.gif" media="(max-width: 1023px)">
+                        <img src="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game_02.gif" class="img-responsive" alt="打中35隻就領購物金" />
+                    </picture>
+                </div>
+                <div class="col-xs-12">
+                    <picture>
+                        <source srcset="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game_05.png" media="(min-width: 1023px)">
+                        <source srcset="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game-m_02.png" media="(max-width: 1023px)">
+                        <img src="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game_05.png" class="img-responsive" alt="打中35隻就領購物金" />
+                    </picture>
+                </div>
+                <div class="col-xs-12 cont">
+                    <div class="col-xs-12 item">
+                        <div class="col-xs-6 inner"><span class="tt">總分:<span id="score">0</span>分</span></div>
+                        <div class="col-xs-6 inner"><span class="tt">倒計時:<span id="time">20</span>秒</span></div>
+                    </div>
+                </div>
+                <div class="col-xs-12 game">
+                    <div id="panel" class="col-xs-12">
+                        <div class="col-xs-12 start" onclick="GameStart()">
+                            <picture>
+                                <source srcset="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game_12.gif" media="(min-width: 1023px)">
+                                <source srcset="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game-m_05.gif" media="(max-width: 1023px)">
+                                <img src="https://img.eclife.com.tw/EDM/11011/doubleone202111/index-game_12.gif" class="img-responsive" alt="打中35隻就領購物金" />
+                            </picture>
+                        </div>
+                        <ul>
+                            <div class="col-xs-12 Gophers_group">
+                                <li class="col-xs-4 col-md-2 list"></li>
+                                <li class="col-xs-4 col-md-2 list"></li>
+                                <li class="col-xs-4 col-md-2 list"></li>
+                            </div>
+                            <div class="col-xs-12 Gophers_group">
+                                <li class="col-xs-4 col-md-2 list"></li>
+                                <li class="col-xs-4 col-md-2 list"></li>
+                                <li class="col-xs-4 col-md-2 list"></li>
+                            </div>
+                            <div class="col-xs-12 Gophers_group">
+                                <li class="col-xs-4 col-md-2 list"></li>
+                                <li class="col-xs-4 col-md-2 list"></li>
+                                <li class="col-xs-4 col-md-2 list"></li>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-12 txt">
+                    <p>注意事項：</p>
+                    <ol>
+                        <li>雙11解放飢渴，購物金使用期限2021.11.03-12</li>
+                        <li>每乙會員登入帳號後可進行遊戲。</li>
+                        <li>轉到獎項，將提供購物金領取連結，點擊按鈕兌換購物金。跳開視窗即失去資格</li>
+                        <li>雙11解放飢渴購物金使用門檻:</li>
+                        <ul class="lts">
+                            <li>$120品牌購物金，品牌商品滿$1600可使用</li>
+                            <li>$180品牌購物金，品牌商品滿$2300可用</li>
+                            <li>$240品牌購物金，品牌商品滿$3000可用</li>
+                            <li>$300品牌購物金，品牌商品滿$3700可用</li>
+                            <li>$360品牌購物金，品牌商品滿$4500可用</li>
+                            <li>$420品牌購物金，品牌商品滿$4600可用</li>
+                        </ul>
+                        <li>品牌購物金涵蓋品牌為(羅技、雷蛇、微星、Cherry、賽睿、海盜船)。</li>
+                        <li>福利品、組合品及特賣商品，不適用購物金等折扣活動。</li>
+                        <li>購物金數量有限，良興EcLife購物網保有活動解釋權利。</li>
+                    </ol>
+                </div>
+                <!--領購物金跳窗開始-->
+                <div class="modal fade" id="modal-container1" role="dialog">
+                    <div class="modal-dialog">
+                        <button type="button" class="icon-cross" data-dismiss="modal"></button>
+                        <div class="row modal-content">
+                            <!-- 內容 -->
+                            <div class="col-xs-12">
+                                <p class="modal-title">恭喜您獲得!!<br />500元購物金</p>
+                                <p class="modal-ps"><a href="index.asp">立即前往購物</a></p>
+                            </div>
+                            <!-- 內容end -->
+                        </div>
+                    </div>
+                </div>
+                <!--領購物金跳窗結束-->
+                <!--未達領取標準跳窗-->
+                <div class="modal fade" id="modal-container2" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="row modal-content">
+                            <button type="button" class="icon-cross" data-dismiss="modal"></button>
+                            <div class="row">
+                                <!-- 內容 -->
+                                <div class="col-xs-12">
+                                    <p class="modal-title modal-txt">
+                                        真可惜！您未達到110分<br>回家再練練吧 嘆.....
+                                    </p>
+                                    <div class="col-xs-12 InputDiv">
+                                        <a href="https://www.eclife.com.tw/MonthEvent/mediashow2021" class="col-xs-12">看個優惠價紓解身心吧 GO</a>
+                                    </div>
+                                </div>
+                                <!-- 內容end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--未達領取標準跳窗結束-->
+            </div>
+        </div>
+        <!--側條-->
+        <div class="fr-fix">
+            <div class="hidden-xs">
+                <div class="fr-hd">
+                    <a href="https://www.eclife.com.tw/MonthEvent/doubleone">
+                        <img src="https://img.eclife.com.tw/EDM/11011/doubleone202111/1101029-YJ-fr.gif" alt="雙11狂歡節">
+                    </a>
+                </div>
+                <div class="fr_bg">
+                    <a href="https://www.eclife.com.tw/keyboard/1407150003/1407070001/" target="_blank" class="fr-a">標籤帶▼單件88折</a>
+                    <a href="https://www.eclife.com.tw/keyboard/1407150003/1407070001/" target="_blank" class="fr-a">標籤帶▼單件88折</a>
+                    <a href="https://www.eclife.com.tw/MonthEvent/202010Razer" target="_blank" class="fr-a">雷蛇▼5折起</a>
+                    <a href="https://www.eclife.com.tw/MonthEvent/logitech10_Master88" target="_blank" class="fr-a">羅技▼88折起</a>
+                    <a href="https://www.eclife.com.tw/keyboard/0703260006/0907140001/1209190003/" target="_blank" class="fr-a">電競耳機送耳機架</a>
+                    <a href="https://www.eclife.com.tw/EDM/Cont5811.htm" target="_blank" class="fr-a">微軟▼85折起</a>
+                    <a href="https://www.eclife.com.tw/pc_nb/0703270001/0503290085/1108030001/" target="_blank" class="fr-a">筆電折1500起</a>
+                    <a href="https://www.eclife.com.tw/MonthEvent/LCDNG0921" target="_blank" class="fr-a">NG螢幕▼58折起</a>
+                    <a href="https://www.eclife.com.tw/pc_nb/0809160001/" target="_blank" class="fr-a">桌機送office365</a>
+                </div>
+            </div>
+            <!-- GoTop效果寫在架構上了 -->
+            <div class="GoTop" style="display: none">△<br><span>TOP</span></div>
+        </div>
+    </div>
+</body>
+</html>

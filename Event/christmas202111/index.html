@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>打中35隻就領購物金</title>
+	<link href="/images/favicon.ico" rel="shortcut icon">
+
+	<script src="/src/assets/js/jquery.min.js"></script>
+	<script src="/src/assets/js/swiper-bundle.min.js"></script>
+	<script src="/src/assets/js/bootstrap.min.js"></script>
+	<script src="/src/assets/js/vue.js"></script>
+    <!-- 此段不要複製到每月活動 框架已有 -->
+    <link href="https://img.eclife.com.tw/EDM/Structure.min.V1.css" rel="stylesheet">
+    <link href="/src/assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../christmas202111/css/Game.css" rel="stylesheet">
+    <script src="../christmas202111/js/game.js"></script>
+</head>
+<body>
+    <div id="lsdv">
+        <div id="js-doc-bg" style="display:none"></div>
+        <!-- //DarkenBackground -->
+        <div class="col-xs-12 ec-logo">
+            <div class="container">
+                <div class="col-xs-12 logo-well">
+                    <a href="https://www.eclife.com.tw/" class="logo-a">
+                        <img src="https://img.eclife.com.tw/EDM/11009/game/EClogo.svg" alt="EcLife" class="img-responsive">
+                    </a>
+                    <!-- <a href="https://www.eclife.com.tw/MonthEvent/MediaCoupon" target="_blank" class="link-a hidden-xs">立即領購物金</a> -->
+                    <!-- <a href="https://www.eclife.com.tw/EDM/Cont5706.htm" target="_blank" class="link-a hidden-xs">活動詳情</a> -->
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 EDM" data-name="EDM">
+            <div class="container bd">
+                <div class="col-xs-12 tt">
+                    <picture>
+                        <source srcset="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_05.png" media="(min-width: 1023px)">
+                        <source srcset="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game-m_02.png" media="(max-width: 1023px)">
+                        <img src="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_05.png" class="img-responsive" alt="尋找興爸" />
+                    </picture>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="find">
+                    <div class="container bd">
+                        <div class="col-xs-6 box">
+                            <picture>
+                                <source srcset="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_08.png" media="(min-width: 1023px)">
+                                <source srcset="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game-m_03.png" media="(max-width: 1023px)">
+                                <img src="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_08.png" class="img-responsive" alt="尋找興爸" />
+                            </picture>
+                            <div class="cont">得分:<span id="point">0</span>分</div>
+                        </div>
+                        <div class="col-xs-6 box">
+                            <picture>
+                                <source srcset="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_09.png" media="(min-width: 1023px)">
+                                <source srcset="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game-m_04.png" media="(max-width: 1023px)">
+                                <img src="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_09.png" class="img-responsive" alt="尋找興爸" />
+                            </picture>
+                            <div class="cont">剩下:<span id="time">60</span>秒</div>
+                        </div>
+                    </div>
+                    <div class="game-bg">
+                        <!-- 大家來找碴img -->
+                        <div class="answer" onclick="overclick()">
+                            <div id="photo">
+                                <picture>
+                                    <source srcset="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_img.jpg" media="(min-width: 1200px)">
+                                    <source srcset="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_img_xs.jpg" media="(max-width: 1200px)">
+                                    <img src="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/game_img.jpg" alt="大家來找碴" class="img-responsive">
+                                </picture>
+                            </div>
+                            <div id="point1" onclick="get(this)"></div>
+                            <div id="point2" onclick="get(this)"></div>
+                            <div id="point3" onclick="get(this)"></div>
+                            <div id="point4" onclick="get(this)"></div>
+                            <div id="point5" onclick="get(this)"></div>
+                            <div id="point6" onclick="get(this)"></div>
+                            <div id="point7" onclick="get(this)"></div>
+                            <div id="point8" onclick="get(this)"></div>
+                            <div id="point9" onclick="get(this)"></div>
+                            <div id="point10" onclick="get(this)"></div>
+                        </div>
+                        <!-- 開始btn -->
+                        <div id="myButton" onclick="start(this)" onmouseover="buttonsound()"><img src="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/play.png"></div>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <defs>
+                            <filter id="squiggly-0">
+                                <feturbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0"></feturbulence>
+                                <fedisplacementmap id="displacement" in="SourceGraphic" in2="noise" scale="6"></fedisplacementmap>
+                            </filter>
+                            <filter id="squiggly-1">
+                                <feturbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1"></feturbulence>
+                                <fedisplacementmap in="SourceGraphic" in2="noise" scale="8"></fedisplacementmap>
+                            </filter>
+                            <filter id="squiggly-2">
+                                <feturbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2"></feturbulence>
+                                <fedisplacementmap in="SourceGraphic" in2="noise" scale="6"></fedisplacementmap>
+                            </filter>
+                            <filter id="squiggly-3">
+                                <feturbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3"></feturbulence>
+                                <fedisplacementmap in="SourceGraphic" in2="noise" scale="8"></fedisplacementmap>
+                            </filter>
+                            <filter id="squiggly-4">
+                                <feturbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4"></feturbulence>
+                                <fedisplacementmap in="SourceGraphic" in2="noise" scale="6"></fedisplacementmap>
+                            </filter>
+                        </defs>
+                    </svg>
+                </div>
+                <audio id="start">
+                </audio>
+                <audio id="background">
+                </audio>
+                <audio id="answer">
+                </audio>
+                <audio id="done">
+                </audio>
+                <audio id="fail">
+                </audio>
+            </div>
+        </div>
+        </div>
+        <!--跳窗-->
+        <div class="modal fade" id="modal-container1" role="dialog">
+            <div class="modal-dialog">
+                <button type="button" class="icon-cross" data-dismiss="modal"></button>
+                <div class="row modal-content">
+                    <!-- 內容 -->
+                    <div class="col-xs-12">
+                        <p class="modal-title">輸入神秘好禮折扣碼，現折$100</p>
+                        <div class="col-xs-12 coupon-btn">
+                            <input type="text" value="2021gift" id="txt_output1" readonly="readonly" class="col-xs-12 col-lg-9 copycoupon-input">
+                            <button onclick="copyurl1()" class="col-xs-12 col-lg-3 copycoupon-btn">複製折扣碼</button>
+                        </div>
+                        <p class="modal-ps"><a href="index.asp">立即前往購物</a></p>
+                    </div>
+                    <!-- 內容end -->
+                </div>
+            </div>
+        </div>
+        <!--跳窗-->
+        <div class="modal fade" id="modal-container2" role="dialog">
+            <div class="modal-dialog">
+                <button type="button" class="icon-cross" data-dismiss="modal"></button>
+                <div class="row modal-content">
+                    <!-- 內容 -->
+                    <div class="col-xs-12">
+                        <p class="modal-title">真可惜~</p>
+                        <p class="modal-ps"><a onclick="reload()">重新開始</a></p>
+                    </div>
+                    <!-- 內容end -->
+                </div>
+            </div>
+        </div>
+        <!--  GoTop效果寫在架構上了-->
+        <div class="GoTop" style="display: none">
+            <img src="https://img.eclife.com.tw/EDM/11012/merrychristmas2021/gotop.svg" alt="" class="img-responsive" />
+        </div>
+    </div>
+</body>
+</html>

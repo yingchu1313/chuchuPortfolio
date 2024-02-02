@@ -1,0 +1,46 @@
+@mixin fontT($line-height: 1.2em)
+	font: #{$font-size} / #{$line-height} $font-family
+
+@mixin fontT-lg($line-height-lg: 1.6em)
+	font: #{$font-size-lg} / #{$line-height-lg} $font-family
+
+@mixin fontT-md($line-height-md: 1em)
+	font: #{$font-size-md} / #{$line-height-md} $font-family
+
+@mixin fontT-sm($line-height-sm: 1.5em)
+	font: #{$font-size-sm} / #{$line-height-sm} $font-family
+
+@mixin fontT-xs($line-height-xs: 1.5em)
+	font: #{$font-size-xs} / #{$line-height-xs} $font-family
+
+
+//margin, padding 設定
+@mixin distanceMP($margin: 0px, $padding: 0px)
+	margin: $margin
+	padding: $padding
+//Chrome+Safari, Firefox, IE, Opera
+@mixin box-shadow($box-shadow)
+	box-shadow: $box-shadow
+
+@mixin transform($transform)
+	transform: $transform
+
+@mixin transform-origin($transform-origin)
+	transform-origin: $transform-origin
+
+@mixin transition($transition)
+	transition: $transition
+
+@mixin animation($animation)
+	animation: $animation
+@mixin linearGradient($linearGradient)
+	background: $linearGradient
+	-pie-background: $linearGradient
+	behavior: url(/pie/PIE.htc)
+@mixin trees($direction, $size) 
+	$shadow: ()
+	@for $i from 1 through 16 
+		$space: $size * 1.2
+		$rand:  (random(20)/10 - 1) * 50px
+		$shadow: append($shadow, ($direction * $i * $space + $rand) (($direction * -$i * $space) + $rand) 15px lighten($col-fg, random(20) + 10%), comma)
+	box-shadow: $shadow

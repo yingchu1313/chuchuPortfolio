@@ -1,0 +1,54 @@
+// 核心變數+混合設定
+@import _variables
+@import _minxins
+
+.ProdList
+	background: url("https://img.eclife.com.tw/EDM/11012/merrychristmas2021/index-m_BG_02.jpg") repeat
+	@media (min-width: $screen-md)
+		background: url("https://img.eclife.com.tw/EDM/11012/merrychristmas2021/index_BG_02.png") repeat
+	margin-bottom: 50px
+	padding: 0 10px
+	font-size: 14px
+	+fontT(1.3em)
+	.p-lst
+		+distanceMP(0 0 10px,5px 10px)
+		text-align: center
+		background: $WHITEcolor
+		transition: all 0.2s ease
+		.inner
+			padding-top: 5px
+		.pMo
+			+distanceMP(5px 0,5px 0)
+			color: $WHITEcolor
+			background: $CIScolorA
+			height: 27px
+			display: block
+			overflow: hidden
+		.pName
+			margin: 5px 0
+			color: darken($WHITEcolor, 60%)
+			height: 42px
+			overflow: hidden
+		.sPrice,.gPrice
+			font-family: $font-family-pri
+		.gPrice
+			margin: 0 0 5px
+			color: darken($WHITEcolor, 60%)
+		.sPrice
+			font-weight: bold
+			color: $REDcolor
+			b
+				font-size: 1.25em
+				letter-spacing: -1px
+				@media (min-width: $screen-lg)
+					font-size: 1.5em
+		strong
+			display: block
+			height: 20px
+			overflow: hidden
+			font-weight: bold
+			color: $REDcolor
+		&:hover
+			transform: translateY(-6px)
+			box-shadow: 0 6px 20px 5px rgba(0,0,0,0.2)
+			z-index: $zindex-floor
