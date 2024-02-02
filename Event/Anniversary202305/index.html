@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>領取888購物金</title>
+	<link href="/images/favicon.ico" rel="shortcut icon">
+
+	<script src="/assets/js/jquery.min.js"></script>
+	<script src="/assets/js/swiper-bundle.min.js"></script>
+	<script src="/assets/js/bootstrap.min.js"></script>
+	<script src="/assets/js/vue.js"></script>
+    <!-- 此段不要複製到每月活動 框架已有 -->
+    <link href="https://img.eclife.com.tw/EDM/Structure.min.V1.css" rel="stylesheet">
+    <link href="/assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="../Anniversary202305/css/Game.css" rel="stylesheet">
+    <script src="../Anniversary202305/js/Game.js"></script>
+</head>
+<body>
+    <div id="lsdv">
+        <div id="js-doc-bg" style="display:none"></div>
+        <!-- //DarkenBackground -->
+        <header>
+            <div class="col-xs-12 ec-logo">
+                <div class="container logo-well">
+                    <a href="https://www.eclife.com.tw/" target="_blank" class="logo-a">
+                        <img src="https://img.eclife.com.tw/EDM/images/BrandLogi/logo.svg" alt="EcLife" class="img-responsive">
+                    </a>
+                </div>
+                <div class="col-xs-12 hidden-md hidden-lg hmenubar">
+                    <nav id="js-mainNAV" class="mainNAV">
+                        <ul class="row side-nav" id="js-side-nav-open">
+                            <li class="side-nav-list menu2">
+                                <a href="https://www.eclife.com.tw/MonthEvent/ecxsimple" target="_blank">主會場</a>
+                            </li>
+                            <li class="side-nav-list menu3">
+                                <a href="https://www.eclife.com.tw/MonthEvent/memorygame/VVip" target="_blank">爽領$888購物金</a>
+                            </li>
+                            <li class="side-nav-list menu4">
+                                <a href="https://www.eclife.com.tw/MonthEvent/2023flashsale/VVip" target="_blank">5/24一日下殺</a>
+                            </li>
+                            <li class="side-nav-list menu5">
+                                <a href="https://www.eclife.com.tw/MonthEvent/FamilyMart202305" target="_blank">全家取件送$50</a>
+                            </li>
+                            <li class="side-nav-list menu6">
+                                <a href="https://www.eclife.com.tw/MonthEvent/NewHorizon2023" target="_blank">遊戲人生</a>
+                            </li>
+                            <li class="side-nav-list menu7">
+                                <a href="https://www.eclife.com.tw/MonthEvent/ecxsimple_makemoney" target="_blank">賺錢顧身</a>
+                            </li>
+                            <li class="side-nav-list menu8">
+                                <a href="https://www.eclife.com.tw/MonthEvent/ecxsimple_outdoor" target="_blank">凹豆求生</a>
+                            </li>
+                            <li class="side-nav-list menu7">
+                                <a href="https://www.eclife.com.tw/EDM/Cont6226.htm" target="_blank">活動詳情</a>
+                            </li>
+                        </ul>
+                        <button class="icon-burger" aria-hidden="true"></button>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="col-xs-12 EDM" data-name="EDM">
+            <div class="container bd">
+                <div class="col-xs-12 title">
+                    <picture>
+                        <source srcset="https://img.eclife.com.tw/EDM/11205/MatchGame/game.png" media="(min-width: 1023px)">
+                        <source srcset="https://img.eclife.com.tw/EDM/11205/MatchGame/game-m.png" media="(max-width: 1023px)">
+                        <img src="https://img.eclife.com.tw/EDM/11205/MatchGame/game.png" class="img-responsive" alt="12張全部翻完" />
+                    </picture>
+                </div>
+                <div class="col-xs-12 num_bg">
+                    <picture>
+                        <source srcset="https://img.eclife.com.tw/EDM/11205/MatchGame/num_bg.png" media="(min-width: 1023px)">
+                        <source srcset="https://img.eclife.com.tw/EDM/11205/MatchGame/num-m_bg.png" media="(max-width: 1023px)">
+                        <img src="https://img.eclife.com.tw/EDM/11205/MatchGame/num_bg.png" class="img-responsive" alt="倒數計時" />
+                    </picture>
+                    <div class="reciprocal">倒數計時：<span class="timeNum" id="time">30</span></div>
+                </div>
+                <div class="col-xs-12 game">
+                    <div class="col-xs-12 gobtn">
+                        <div class="col-xs-12 box-s"></div>
+                        <div class="col-xs-12">
+                            <picture>
+                                <source srcset="https://img.eclife.com.tw/EDM/11205/MatchGame/game_btn.gif" media="(min-width: 1023px)">
+                                <source srcset="https://img.eclife.com.tw/EDM/11205/MatchGame/game-m_btn.gif" media="(max-width: 1023px)">
+                                <img src="https://img.eclife.com.tw/EDM/11205/MatchGame/game_btn.gif" class="img-responsive" alt="立即玩" />
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 cards">
+                        <div class="col-xs-4 col-md-3 cardBox">
+                            <div class="col-xs-12 card">
+                                <div class="face front">
+                                    <a onmousedown="bleep.play()">
+                                        <img src="https://img.eclife.com.tw/EDM/11205/MatchGame/Card_bg.png" class="img-responsive">
+                                    </a>
+                                </div>
+                                <div class="face back"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 txt">
+                    <p>注意事項：</p>
+                    <ol>
+                        <li>良興生活搜查家，購物金使用期限2023.5.17-26</li>
+                        <li>每乙會員登入帳號後可進行遊戲。</li>
+                        <li>30秒內完成遊戲，將匯入$888購物金，跳窗出現後可點擊至活動頁或查詢會員購物金頁面</li>
+                        <li>良興生活搜查家購物金使用門檻:</li>
+                        <ul class="lts">
+                            <li>$198品牌購物金，品牌商品滿$2500可用</li>
+                            <li>$290品牌購物金，品牌商品滿$3500可用</li>
+                            <li>$400品牌購物金，品牌商品滿$4500可用</li>
+                        </ul>
+                        <li>品牌購物金涵蓋品牌為(Cherry、海盜船、Elgato、羅技、Blue、微星、雷蛇) 螢幕筆電除外。</li>
+                        <li>福利品、組合品及特賣商品，不適用購物金等折扣活動。</li>
+                        <li>購物金數量有限，良興EcLife購物網保有活動解釋權利。</li>
+                    </ol>
+                </div>
+                <!--領完購物金跳窗-->
+                <div class="modal fade" id="modal-container1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="row modal-content">
+                            <button type="button" class="icon-cross" data-dismiss="modal" onclick="EventReset()"></button>
+                            <div class="row">
+                                <!-- 內容 -->
+                                <div class="col-xs-12">
+                                    <p class="modal-title">
+                                        恭喜你!!<br>
+                                        獲得888元</span>
+                                    </p>
+                                    <div class="col-xs-12 InputDiv">
+                                        <a href="https://www.eclife.com.tw/MonthEvent/ecxsimple" class="col-xs-12">爽買衝一波 >></a>
+                                        <a href="https://www.eclife.com.tw/Personal/ShoppingCash/" class="col-xs-12">看錢錢怎麼用 >></a>
+                                    </div>
+                                </div>
+                                <!-- 內容end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--領完購物金跳窗結束-->
+                <!--已領過購物金跳窗-->
+                <div class="modal fade" id="modal-container2" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="row modal-content">
+                            <button type="button" class="icon-cross" data-dismiss="modal" onclick="EventReset()"></button>
+                            <div class="row">
+                                <!-- 內容 -->
+                                <div class="col-xs-12">
+                                    <p class="modal-title">
+                                        怎麼這麼強啦!<br>
+                                        <span class="fcA">你已經領過$888囉</span>
+                                    </p>
+                                    <div class="col-xs-12 InputDiv">
+                                        <a href="https://www.eclife.com.tw/MonthEvent/ecxsimple" class="col-xs-12">爽買衝一波 >></a>
+                                        <a href="https://www.eclife.com.tw/Personal/ShoppingCash/" class="col-xs-12">看錢錢怎麼用 >></a>
+                                    </div>
+                                </div>
+                                <!-- 內容end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--已領過購物金跳窗結束-->
+                <!-- 遊戲失敗再來一次跳窗開始 -->
+                <div class="modal fade" id="modal-container3" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="row modal-content">
+                            <button type="button" class="icon-cross" data-dismiss="modal" onclick="EventReset()"></button>
+                            <div class="row">
+                                <!-- 內容 -->
+                                <div class="col-xs-12">
+                                    <p class="modal-title">
+                                        沒事!!!<br>
+                                        <span class="fcA">相信你只是手抖</span>
+                                    </p>
+                                    <div class="col-xs-12 InputDiv">
+                                        <button class="col-xs-12 GetReset" data-dismiss="modal" onclick="EventReset()">直接再來一次 >></button>
+                                    </div>
+                                </div>
+                                <!-- 內容end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 遊戲失敗再來一次跳窗結束 -->
+            </div>
+        </div>
+        <!-- GoTop效果寫在架構上了 -->
+        <div class="GoTop" style="display: none">△<br><span>TOP</span></div>
+    </div>
+</body>
+</html>

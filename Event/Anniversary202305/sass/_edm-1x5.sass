@@ -1,0 +1,114 @@
+// 核心變數+混合設定
+@import _variables
+@import _minxins
+
+.ProdList
+	margin-bottom: 50px
+	padding: 0 10px
+	font-size: 14px
+	+fontT(1.3em)	
+	.p-lst
+		+distanceMP(0 0 10px,5px 10px)
+		text-align: center
+		background: $WHITEcolor
+		transition: all 0.2s ease
+		.inner
+			padding-top: 5px
+		.pMo
+			+distanceMP(5px 0,5px 0)
+			color: $WHITEcolor
+			background: $CIScolorA
+			height: 27px
+			display: block
+			overflow: hidden
+		.pName
+			margin: 5px 0
+			color: darken($WHITEcolor, 60%)
+			height: 42px
+			overflow: hidden
+		.sPrice,.gPrice
+			font-family: $font-family-pri
+		.gPrice
+			margin: 0 0 5px
+			color: darken($WHITEcolor, 60%)
+		.sPrice
+			font-weight: bold
+			color: $REDcolor
+			b
+				font-size: 1.25em
+				letter-spacing: -1px
+				@media (min-width: $screen-lg)
+					font-size: 1.5em
+		strong
+			display: block
+			height: 20px
+			overflow: hidden
+			font-weight: bold
+			color: $REDcolor
+		&:hover
+			transform: translateY(-6px)
+			filter: drop-shadow(2px 5px 11px rgba(230,2,29,0.2))
+			z-index: $zindex-floor
+
+	.t-lst
+		position: relative
+		text-align: center
+		margin: 15px 0px 10px
+		transition: .8s
+		@media (min-width: $screen-md)
+			margin: 15px 0px 20px
+		&:hover
+			transform: translateY(-6px)
+			filter: drop-shadow(2px 5px 11px rgba(230,2,29,0.2))
+			z-index: $zindex-floor
+		.ProdList-a
+			padding: 15px 5px 0
+			@media (min-width: $screen-md)
+				padding: 15px 10px 0
+		.Numbg
+			position: absolute
+			top: -20px
+			left: 0
+			z-index: 4
+		.discNum
+			position: absolute
+			transform: translate(-50%, -50%)
+			top: 50%
+			left: 50%
+			color: white
+			font-size: 1.7em
+			font-weight: bold
+		.lst_bg
+			background: white
+			padding: 20px 12px 10px
+			border-radius: 20px
+			text-align: center
+			@media (min-width: $screen-md)
+				padding: 20px 15px
+		.pName
+			margin: 10px 0
+			color: #666666
+			height: 42px
+			overflow: hidden
+		.priceFlex
+			font-weight: bold
+			@media (min-width: $screen-md)
+				display: flex
+				align-items: center
+				justify-content: center
+			.sPrice
+				color: #df0000
+				font-size: 2em
+			small
+				display: block
+				@media (min-width: $screen-md)
+					display: inline-block
+					padding-left: 5px
+		.gobtn
+			padding: 5px 0 5px
+			@media (min-width: $screen-md)
+				padding: 15px 15px 5px
+		.gobuy
+			padding: 0 0 5px
+			@media (min-width: $screen-md)
+				padding: 5px 15px 5px

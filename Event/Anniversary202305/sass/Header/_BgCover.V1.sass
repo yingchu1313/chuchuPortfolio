@@ -1,0 +1,28 @@
+// Megamenu背景變黑
+#Megamenu_BgCover
+	position: absolute
+	left: 0
+	height: 160%
+	width: 100%
+	background: rgba(0,0,0,0.7)
+	z-index: 999
+	overflow: hidden
+	transition: 0.05s
+
+// 共用BgCover背景變黑,BgCoverW背景變白
+.BgCover, .BgCoverW
+	position: fixed
+	top: 0
+	left: 0
+	height: 160%
+	width: 100%
+	z-index: -1
+	overflow: hidden
+	transition: 0.05s
+.BgCover.BgCoverShow
+	background: rgba(0,0,0,0.7)
+	z-index: 1000
+	transition: 0.2s
+.BgCoverW.BgCoverShow
+	background: rgba(0,0,0,0)
+	z-index: 1000

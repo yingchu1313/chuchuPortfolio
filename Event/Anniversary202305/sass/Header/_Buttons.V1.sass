@@ -1,0 +1,88 @@
+// 按鈕
+.btn
+  display: inline-block
+  padding: 5px 20px
+  touch-action: manipulation
+  white-space: nowrap
+  letter-spacing: 0.05em
+  background: darken($WHITEcolor, 20%)
+  border: none
+  outline: none
+  &:hover, &:focus, &:active
+    border: none
+    outline: none
+  &.disabled, &[disabled], fieldset[disabled]
+    cursor: not-allowed
+//離開
+.btnOut
+  background: darken($WHITEcolor, 18.5%)
+  color: darken($WHITEcolor, 0%)
+  outline: 1px solid darken($WHITEcolor, 18.5%)
+  &:hover, &:focus
+    background: darken($WHITEcolor, 35%)
+    +box-shadow(0 0 5px 0 darken($WHITEcolor, 30%))
+//立即
+.btnAsap
+  background: $REDcolor
+  color: darken($WHITEcolor, 0%)
+  outline: 1px solid darken($WHITEcolor, 0%)
+  &:hover, &:focus
+    // background: darken($CIScolorB, 10%)
+    // -pie-background: darken($CIScolorB, 10%)
+    // +box-shadow(0 0 5px 0 darken($CIScolorB, 0%))
+//繼續
+.btnRe
+  background: darken($WHITEcolor, 0%)
+  color: $REDcolor
+  outline: 1px solid $REDcolor
+  &:hover, &:focus
+    outline: 1px solid $REDcolor
+    // background: darken($CIScolorA, 10%)
+    // -pie-background: darken($CIScolorA, 10%)
+    // +box-shadow(0 0 5px 0 lighten($CIScolorA, 0%))
+    // background: $REDcolor
+// 使用ModalDialog
+.btnLink
+  padding: 5px
+  background: none
+  border: none
+  outline: none
+  color: $CIScolorA
+  letter-spacing: -0.05px
+  &:hover, &:focus
+    background: none
+.btn-group
+  display: inline-block
+  position: relative
+  vertical-align: middle
+// .btn-lg,
+// .btn-group-lg > .btn
+//   padding: 10px 20px
+// .btn-sm,
+// .btn-group-sm > .btn
+//   padding: 5px
+// .btn-xs,
+// .btn-group-xs > .btn
+//   padding: 1px 5px
+
+.btn-block
+  display: block
+  width: 100%
+  padding: 15px
+  font-size: $font-size-lg
+
+// .btn-block + .btn-block
+//   margin-top: 5px
+
+// .close
+//   cursor: pointer
+//   background: none
+//   border: none
+
+// input[type="submit"],
+// input[type="reset"],
+// input[type="button"]
+//   padding: 5px
+//   &.btn-block
+//     width: 100%
+

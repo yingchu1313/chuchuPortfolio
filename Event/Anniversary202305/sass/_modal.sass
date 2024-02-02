@@ -1,0 +1,110 @@
+// 核心變數+混合設定
+@import _variables
+@import _minxins
+// 框架
+.fade
+  opacity: 0
+  +transition(opacity .15s linear)
+.fade.in
+  opacity: 1
+.modal
+  display: none
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: $zindex-float
+  overflow-y: auto
+.modal-open
+  overflow: hidden
+.modal-backdrop
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: $zindex-js-doc 
+  background: $BLACKcolor
+.modal-backdrop.fade
+  opacity: 0
+  filter: alpha(opacity=0)
+.modal-backdrop.in
+  opacity: .8
+  filter: alpha(opacity=80)
+.modal-dialog
+  position: absolute
+  top: 20%
+  left: 50%
+  transform: translateX(-50%)
+  width: 96%
+  // +distanceMP(70px 5%,15px)
+  background: rgba(255,255,255,0.9)
+  // border-radius: 15px
+  @media (min-width: $screen-sm)
+    width: 50%
+  @media (min-width: $screen-lg)
+    width: 40%
+    // background: $WHITEcolor
+    // max-width: 727px
+    // +distanceMP(8% auto 0,15px 50px)
+#modal-container3
+  .modal-dialog
+    background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal-m_BG_2.png") top center no-repeat
+    background-size: 100%
+    @media (min-width: $screen-sm)
+      background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal_BG_2.png") top center no-repeat
+      background-size: 100%
+    @media (min-width: $screen-lg)
+      background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal_BG_2.png") top center no-repeat
+      background-size: 100%
+
+.modal-content
+  position: relative
+  padding: 50px 0
+  @media (min-width: $screen-sm)
+    padding: 50px
+
+// 內容
+.modal
+  +fontT
+  // 關閉
+  .icon-cross
+    display: block
+    width: 40px
+    height: 40px
+    position: absolute
+    right: 10px
+    top: -45px
+    background: url(https://img.eclife.com.tw/EDM/10906/cross.svg) no-repeat
+    z-index: $zindex-floor
+    cursor: pointer
+    border: none
+  .modal-title
+    margin: 0
+    padding: 10px
+    font-size: 1em
+    line-height: 1.5em
+    @media (min-width: $screen-sm)
+      margin: 20px 10px
+      padding: 30px 20%
+  .modal-ps
+    text-align: center 
+    a
+      font-size: 1em
+      line-height: 1.5em
+      color: darken($WHITEcolor, 54%)
+      &:hover
+        color: $BLACKcolor
+  .col-xs-offset-2
+    padding: 10px 0
+  .bn-Pay
+    padding: 5px 30px
+    text-align: center
+    font-size: 1.5em
+    line-height: 1.2em
+    @media (min-width: $screen-sm)
+      display: block
+      border-radius: 50%
+      padding: 30px 20px
+      font-size: 2em

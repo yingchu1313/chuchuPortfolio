@@ -1,0 +1,247 @@
+// 重置
+// @import "bootstrap/normalize"
+
+// 核心變數+混合設定
+@import _variables
+@import _minxins
+// 共用
+@import _scaffolding
+// 動畫
+@import _keyframes
+// js-網站效果
+@import _js-doc
+// 表單
+@import Header/_Forms.V1
+// 按鈕
+@import Header/_Buttons.V1
+// 背景變黑
+@import Header/_BgCover.V1
+// 跳窗
+@import Header/_ModalDialog.V1
+@import Header/_LoginDialog.V1
+@import _modal
+// 主頁+分類頁
+.modal-dialog
+	background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal-m_BG.png") top center no-repeat
+	background-size: 100%
+	@media (min-width: $screen-sm)
+		background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal_BG.png") top center no-repeat
+		background-size: 100%
+	@media (min-width: $screen-lg)
+		background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal_BG.png") top center no-repeat
+		background-size: 100%
+#modal-container3
+	.modal-dialog
+		background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal-m_BG_2.png") top center no-repeat
+		background-size: 100%
+		@media (min-width: $screen-sm)
+			background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal_BG_2.png") top center no-repeat
+			background-size: 100%
+		@media (min-width: $screen-lg)
+			background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/modal_BG_2.png") top center no-repeat
+			background-size: 100%
+
+
+.icon-cross
+	&:before
+		content: url("https://img.eclife.com.tw/EDM/10907/MediaShow/Coupon/x.svg")
+		display: inline-block
+		width: 15px
+		padding-top: 5px
+.icon-fb
+	&:before
+		content: url("https://img.eclife.com.tw/EDM/10907/MediaShow/Coupon/fb.svg")
+		display: inline-block
+		width: 20px
+		position: relative
+		top: 2px
+.LINEImg
+	width: 25px
+	position: absolute
+	left: -8px
+	top: -2px
+.LineWall
+	position: relative
+	display: inline-block
+	margin: 1px 0 0
+	padding: 0 0 0 22px
+.btnLine
+	background: #00b300
+	color: white
+// EC hearder 隱藏
+#HeaderApp
+	position: absolute
+	top: -100%
+	width: 0
+
+// 倒數字體
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap')
+body
+	background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/game-m_bg.jpg") center 36px no-repeat #245fcb
+	background-size: 100%
+	@media (min-width: $screen-md)
+		background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/game_bg.jpg") center top no-repeat #245fcb
+		background-size: 115%
+	@media (min-width: $screen-lg)
+		background: url("https://img.eclife.com.tw/EDM/11205/MatchGame/game_bg.jpg") center 42px no-repeat #245fcb
+#lsdv
+	// 導覽列
+	@import _side-nav
+	// 翻牌
+	@import _eventsPage
+	// 產品排排站
+	@import _edm-1x5
+
+	.ec-logo
+		background-color: $BLACKcolor
+		+fontT
+		.logo-well
+			padding: 5px
+		.logo-a
+			position: relative
+			display: inline-block
+			width: 30%
+			// 為了iphone5 設計的
+			@media (max-width: 321px)
+				width: 35%
+			@media (min-width: $screen-sm)
+				width: 15%
+	.menubar
+		// background-color: #212121
+		// text-align: center
+		+fontT
+		.BrandLogi-well
+			padding: 15px 0 10px
+		.BrandLogi-a
+			position: relative
+			display: inline-block
+			width: 60%
+			// 為了iphone5 設計的
+			@media (max-width: 321px)
+				width: 35%
+			@media (min-width: $screen-sm)
+				width: 23%
+	.EDM
+		//bd定位用
+		.bd
+			position: relative
+		.title
+			animation: swing 1s
+			margin: 10px 0 30px 
+
+		.num_bg
+			position: relative
+
+		.reciprocal
+			position: absolute
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 100%
+			left: 50%
+			top: 50%
+			transform: translate(-50% , -50%)
+			color: $WHITEcolor
+			font-size: 1.8rem
+			filter: drop-shadow(3px 2px 0px $BLACKcolor)
+			@media (min-width: $screen-sm)
+				font-size: 3rem
+			@media (min-width: $screen-md)
+				font-size: 2.8rem
+			.timeNum
+				font-size: 3rem
+				font-family: 'Squada One', cursive
+				@media (min-width: $screen-sm)
+					font-size: 4.8rem
+				@media (min-width: $screen-md)
+					font-size: 4rem
+
+		
+
+
+
+		.modal-dialog
+			.modal-content
+				padding: 0
+
+		.modal-title
+			font-weight: bold
+			margin: 110px 0 10px
+			text-align: center
+			color: $WHITEcolor
+			font-size: 2rem
+			line-height: 3rem
+			.fcA
+				color: #00f6ff
+			@media (min-width: $screen-md)
+				font-size: 3em
+				line-height: 1.2em
+				padding: 0 50px
+				margin: 115px 0 30px
+			@media (min-width: $screen-lg)
+				margin: 200px 0 30px
+
+
+		.InputDiv
+			text-align: center
+			margin: 0 0 100px
+			padding: 0 50px 0
+			input , button, a
+				outline: none
+				border: none
+			input
+				padding: 15px 50px
+				margin-bottom: 10px
+				text-align: center
+			button, a
+				color: white
+				font-size: .8rem
+				background: none
+				border: none
+				border-radius: 0
+				@media (min-width: $screen-lg)
+					font-size: 1rem
+					display: flex
+					justify-content: center
+
+
+		// 注意事項
+		.txt
+			+distanceMP(10px 0 50px,20px 30px)
+			background: rgba(0%, 0%, 0%, 0.9)
+			border: 2px solid #f2a900
+			color: $WHITEcolor
+			line-height: 1.8em
+			@media (min-width: $screen-sm)
+				+distanceMP(60px auto 50px,30px 150px)
+				border-radius: 10px
+			@media (min-width: $screen-md)
+				+distanceMP(20px auto 50px,30px 150px)
+			p
+				margin: 5px 0
+				position: relative
+				left: -18px
+			li
+				list-style: decimal
+			.lts
+				li
+					list-style: circle
+					margin-left: 20px
+				
+//右側固定選單
+.GoTop
+	position: fixed
+	right: 1%
+	bottom: 10px
+	background: #162488
+	padding: 10px
+	font-weight: 600
+	color: #ffffff
+	cursor: pointer
+	border-radius: 15px
+	text-align: center
+	z-index: $zindex-navbar
+	overflow: hidden
+	@media (min-width: $screen-md)
+		bottom: 5%
+		

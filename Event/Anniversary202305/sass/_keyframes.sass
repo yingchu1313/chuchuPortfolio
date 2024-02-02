@@ -1,0 +1,142 @@
+@keyframes scale
+	0%
+		transform: scale(1)
+	50%
+		transform: scale(0.95)
+	100%
+		transform: scale(1)
+
+@keyframes rotate
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+@keyframes translate
+	0%
+		transform: translate(0, -10px)
+	50%
+		transform: translate(5px, 0px)
+	100%
+		transform: translate(0, -10px)
+		
+@keyframes translateX
+	0%,100%
+		transform: translateX(-5px)
+@keyframes shake
+
+	0%,to
+		transform: translateZ(0)
+
+	10%,30%,50%,70%,90%
+		transform: translate3d(-10px, 0, 0)
+
+	20%,40%,60%,80%
+		transform: translate3d(10px, 0, 0)
+
+@keyframes rotateInDownLeft
+	0%
+		opacity: 0
+		transform: rotate(-45deg)
+		transform-origin: left bottom
+	to
+		opacity: 1
+		transform: translateZ(0)
+		transform-origin: left bottom
+@keyframes swing
+	20%
+		transform: rotate(15deg)
+
+	40%
+		transform: rotate(-10deg)
+
+	60%
+		transform: rotate(5deg)
+
+	80%
+		transform: rotate(-5deg)
+
+	to
+		transform: rotate(0deg)
+@keyframes btncolor
+	20%,60%,to
+		box-shadow: 0px 0px 10px rgba(255,255,0,0.8)
+
+	40%,80%
+		box-shadow: 0px 0px 10px rgba(255,255,0,0.3)
+
+@keyframes zoomIn
+	from
+		opacity: 0
+		transform: scale3d(.3, .3, .3)
+	50%
+		opacity: 1
+
+@keyframes zoomOut
+	from
+		opacity: 1
+
+	50%
+		opacity: 0
+		transform: scale3d(.3, .3, .3)
+
+	to
+		opacity: 0
+
+@-webkit-keyframes uptodown-play
+	0%
+		transform: translate(0, 0)
+	100%
+		transform: translate(0, -10px)
+
+@keyframes uptodown-play
+	0%
+		transform: translate(0, 0)
+	100%
+		transform: translate(0, -10px)
+
+
+@keyframes TestMove2
+	from
+		left: 0%
+		transform: translateX(0px)
+		opacity: 0
+	1%
+		left: 0%
+		transform: translateX(0px)
+		opacity: 1
+	20%
+		left: 0%
+		transform: translateX(360px)
+		opacity: 1
+	35%
+		left: 0%
+		transform: translateX(380px)
+		opacity: 0
+	to
+		left: 0%
+		transform: translateX(0px)
+		opacity: 0
+    
+
+@media screen and (max-width:736px)
+	@keyframes TestMove2
+		from
+			left: 0%
+			transform: translateX(0px)
+			opacity: 0
+		1%
+			left: 0%
+			transform: translateX(0px)
+			opacity: 1
+		20%
+			left: 0%
+			transform: translateX(61vw)
+			opacity: 1
+		35%
+			left: 0%
+			transform: translateX(65vw)
+			opacity: 0
+		to
+			left: 0%
+			transform: translateX(0px)
+			opacity: 0
